@@ -1,5 +1,5 @@
 class Customer < ActiveRecord::Base
 
-belongs_to :company, counter_cache: true
-has_many :order
+belongs_to :companies
+has_many :orders
 end

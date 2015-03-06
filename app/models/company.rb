@@ -1,5 +1,4 @@
 class Company < ActiveRecord::Base
-has_many :customer
-
+  has_many :customers
 
 end
