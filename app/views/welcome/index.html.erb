@@ -1,0 +1,14 @@
+
+
+
+<h1>Welcome to the Company Site</h1>
+<div>
+<button class = "btn btn-info"><%= link_to "Company List", controller:companies_path%></button><br>
+Current Number of Customers:   <%=  Company.all.count %>
+<br>
+<br><button class = "btn btn-info"><%= link_to "Customer List", controller:customers_path%></button><br>
+Current Number of Customer:     <%= Customer.all.count.to_i %>
+<br>
+<br><button class = "btn btn-info"><%= link_to "Order List", controller:orders_path%></button><br>
+Current Number of Orders: <%= Order.all.count.to_i %>
+</div>
