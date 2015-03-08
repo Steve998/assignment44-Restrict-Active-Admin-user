@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Company<br>logo</th>
       <th>Company<br>name</th>
       <th>Customer<br>count</th>
       <th>Company<br>Bio</th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @companies.each do |company| %>
       <tr>
+        <td><%= image_tag company.image_url(:thumb) if company.image? %></td>
         <td><%= company.company_name %></td>
         <td><%= company.customers.count %></td>
         <td><%= company.company_bio %></td>

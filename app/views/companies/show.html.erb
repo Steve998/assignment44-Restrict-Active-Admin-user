@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @company.image_url.to_s %>
 <p>
   <strong>Company name:</strong>
   <%= @company.company_name %>
@@ -10,6 +11,8 @@
   <strong>Company bio:</strong>
   <%= @company.company_bio %>
 </p>
+
+
 
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>
