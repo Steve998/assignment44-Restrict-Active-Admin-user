@@ -1,5 +1,5 @@
 class Customer < ActiveRecord::Base
 
-belongs_to :companies
+belongs_to :company
 has_many :orders
 end
