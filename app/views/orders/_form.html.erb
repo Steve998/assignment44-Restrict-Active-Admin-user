@@ -15,14 +15,21 @@
     <%= f.label :number %><br>
     <%= f.number_field :number %>
   </div>
+
   <div class="field">
     <%= f.label :quantity %><br>
     <%= f.number_field :quantity %>
   </div>
+
   <div class="field">
     <%= f.label :item %><br>
     <%= f.text_field :item %>
   </div>
+
+    <div class="field">
+      <%= f.label Customer ID %><br>
+      <%= f.text_field :customer_id %>
+    </div>
 
   <div class="actions">
     <%= f.submit %>
