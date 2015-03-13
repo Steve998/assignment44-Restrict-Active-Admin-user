@@ -15,6 +15,7 @@ ActiveAdmin.register Company do
   # end
   index do |x|
     selectable_column
+    column :id
     column :name
     column :bio
     column :image do |pic|
