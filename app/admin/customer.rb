@@ -4,7 +4,7 @@ ActiveAdmin.register Customer do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-   permit_params :customer_name, :customer_order, :customer_company, :company_id
+   permit_params :name, :order, :company_id
   #
   # or
   #
@@ -15,8 +15,8 @@ ActiveAdmin.register Customer do
   # end
   index do |x|
     selectable_column
-    column :customer_name
-    column :customer_order
+    column :name
+    column :order
     column :company_id
     actions
   end

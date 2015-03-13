@@ -12,21 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :order_number %><br>
-    <%= f.number_field :order_number %>
+    <%= f.label :number %><br>
+    <%= f.number_field :number %>
   </div>
   <div class="field">
-    <%= f.label :order_quantity %><br>
-    <%= f.number_field :order_quantity %>
+    <%= f.label :quantity %><br>
+    <%= f.number_field :quantity %>
   </div>
   <div class="field">
-    <%= f.label :order_item %><br>
-    <%= f.text_field :order_item %>
+    <%= f.label :item %><br>
+    <%= f.text_field :item %>
   </div>
-  <div class="field">
-    <%= f.label :order_customer %><br>
-    <%= f.text_field :order_customer %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

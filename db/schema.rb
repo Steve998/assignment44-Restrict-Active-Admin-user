@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150309200717) do
+ActiveRecord::Schema.define(version: 20150313152331) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,32 +32,27 @@ ActiveRecord::Schema.define(version: 20150309200717) do
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
   create_table "companies", force: :cascade do |t|
-    t.string   "company_name"
-    t.string   "company_customer"
-    t.text     "company_bio"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-    t.integer  "customer_count"
-    t.integer  "customers_count"
+    t.string   "name"
+    t.text     "bio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "image"
   end
 
   create_table "customers", force: :cascade do |t|
-    t.string   "customer_name"
-    t.integer  "customer_order"
-    t.string   "customer_company"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.string   "name"
+    t.integer  "order"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer  "company_id"
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer  "order_number"
-    t.integer  "order_quantity"
-    t.string   "order_item"
-    t.string   "order_customer"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.integer  "number"
+    t.integer  "quantity"
+    t.string   "item"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "customer_id"
   end
 

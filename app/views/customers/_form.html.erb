@@ -12,18 +12,18 @@
 <% end %>
 
 <div class="field">
-  <%= f.label :customer_name %><br>
-  <%= f.text_field :customer_name %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
 </div>
 <div class="field">
-  <%= f.label :customer_order %><br>
-  <%= f.number_field :customer_order %>
+  <%= f.label :order %><br>
+  <%= f.number_field :order %>
 </div>
 
 
 <div class="field">
-  <%= f.label :company_name %><br>
-  <%= f.select :customer_company, Company.all.collect {|p| [ p.company_name, p.id ] }, {include_blank: 'None'} %>
+  <%= f.label :name %><br>
+  <%= f.select :company, Company.all.collect {|p| [ p.company_name, p.id ] }, {include_blank: 'None'} %>
 
 </div>
 

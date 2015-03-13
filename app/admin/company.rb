@@ -4,7 +4,7 @@ ActiveAdmin.register Company do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  # permit_params :list, :of, :attributes, :on, :model
+   permit_params :name, :bio, :image
   #
   # or
   #
@@ -15,8 +15,8 @@ ActiveAdmin.register Company do
   # end
   index do |x|
     selectable_column
-    column :company_name
-    column :company_bio
+    column :name
+    column :bio
     column :image do |pic|
       link_to image_tag(pic.image.thumb.url)
     end

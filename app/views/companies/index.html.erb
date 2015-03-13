@@ -17,9 +17,9 @@
     <% @companies.each do |company| %>
       <tr>
         <td><%= image_tag company.image_url(:thumb) if company.image? %></td>
-        <td><%= company.company_name %></td>
+        <td><%= company.name %></td>
         <td><%= company.customers.count %></td>
-        <td><%= company.company_bio %></td>
+        <td><%= company.bio %></td>
         <td><%= link_to 'Show', company %></td>
         <td><%= link_to 'Edit', edit_company_path(company) %></td>
         <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>

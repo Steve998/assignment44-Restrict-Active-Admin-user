@@ -6,6 +6,6 @@ class CustomersController < InheritedResources::Base
   private
 
   def customer_params
-    params.require(:customer).permit(:customer_name, :customer_order, :customer_company, :company_id)
+    params.require(:customer).permit(:name, :order, :company_id)
   end
 end

@@ -42,7 +42,9 @@ gem 'mini_magick'
 # Carrier Wave gem
 gem 'carrierwave'
 
-
+group :development do
+  gem "better_errors"
+end
 # Use postgres and the Heroku rails gem for Heroku
 group :production do
   gem 'rails_12factor'

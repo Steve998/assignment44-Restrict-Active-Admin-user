@@ -16,9 +16,8 @@
   <tbody>
     <% @customers.each do |customer| %>
       <tr>
-        <td><%= customer.customer_name %></td>
-        <td><%= customer.customer_order %></td>
-        <td><%= customer.customer_company %></td>
+        <td><%= customer.name %></td>
+        <td><%= customer.order %></td>
         <td><%= customer.orders.count %></td>
         <td><%= link_to 'Show', customer %></td>
         <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
