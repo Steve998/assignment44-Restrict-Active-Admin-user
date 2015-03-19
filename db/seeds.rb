@@ -7,13 +7,12 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 1.times do |y|
-  User.create(name: 'Guest',
+  User.create(name: 'Steve',
               username: 'guest',
-              email: 'guest@guest.com',
+              email: ('guest@guest.com'),
               remote_avatar_url: 'http://robohash.org/sitsequiquia.png?size=300x300',
               admin: false )
 end
-
 
 4.times do |a|
   1.times do|b|
