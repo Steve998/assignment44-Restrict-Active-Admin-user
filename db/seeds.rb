@@ -5,31 +5,42 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-2.times do |a|
-  Company.create(company_name: Faker::Name.name,
-  company_bio: Faker::Lorem.sentence(3),
-  remote_image_url: "http://lorempixel.com/400/200/")
+
+1.times do |y|
+  User.create(name: 'Guest',
+              username: 'guest',
+              email: 'guest@guest.com',
+              remote_avatar_url: 'http://robohash.org/sitsequiquia.png?size=300x300',
+              admin: false )
 end
 
 
-  Company.all.each do |a|
-    1.times do |x|
+4.times do |a|
+  1.times do|b|
+    user = User.ids.shuffle.first
+    Company.create(name: Faker::Name.name,
+    bio: Faker::Lorem.sentence(3),
+    remote_image_url: "http://lorempixel.com/400/200/",
+    user_id: user )
+   end
+end
+
+  Company.all.each do |c|
+    2.times do |d|
       company = Company.ids.shuffle.first
-      Customer.create(customer_name: Faker::Name.name,
-      customer_order: Faker::Number.number(4),
-      customer_company: a.company_name,
-      company_id: a.id)
+      Customer.create(name: Faker::Name.name,
+      order: Faker::Number.number(4),
+      company_id: c.id)
     end
 end
 
 
- Customer.all.each do |b|
-      1.times do |z|
+ Customer.all.each do |e|
+      2.times do |f|
       customer = Customer.ids.shuffle.first
-      Order.create(order_number: Faker::Number.number(4),
-      order_quantity: Faker::Number.number(1),
-      order_item: Faker::Commerce.department(2),
-      order_customer: b.customer_name,
-      customer_id: b.id)
+      Order.create(number: Faker::Number.number(4),
+      quantity: Faker::Number.number(1),
+      item: Faker::Commerce.department(2),
+      customer_id: e.id)
     end
 end

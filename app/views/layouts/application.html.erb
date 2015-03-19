@@ -17,6 +17,8 @@
 </head>
 <body>
 
+<h3>Welcome <% if signed_in? %><%= link_to @current_user.name, account_edit_path %>!<% end %></h3>
+
 <%= yield %>
 
 </body>

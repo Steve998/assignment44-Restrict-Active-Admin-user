@@ -41,6 +41,8 @@ gem 'fog'
 gem 'mini_magick'
 # Carrier Wave gem
 gem 'carrierwave'
+# Paginate
+gem 'kaminari'
 
 group :development do
   gem "better_errors"

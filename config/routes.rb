@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  get 'account/edit'
+  patch 'account/update'
+
   ActiveAdmin.routes(self)
   resources :companies, :customers, :orders
   root 'welcome#index'
