@@ -1,5 +1,5 @@
 class Company < ActiveRecord::Base
   has_many :customers
-  has_many :users
+  belongs_to :user
   mount_uploader :image, PictureUploader
 end

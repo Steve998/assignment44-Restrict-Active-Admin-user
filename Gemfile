@@ -43,6 +43,8 @@ gem 'mini_magick'
 gem 'carrierwave'
 # Paginate
 gem 'kaminari'
+# Bourbon
+gem 'bourbon'
 
 group :development do
   gem "better_errors"

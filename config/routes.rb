@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   get 'account/edit'
   patch 'account/update'
+  get 'account/usercompany'
 
   ActiveAdmin.routes(self)
   resources :companies, :customers, :orders
@@ -15,6 +16,7 @@ Rails.application.routes.draw do
 
   resources :companies
   get 'welcome/index'
+  get 'account/usercompany'
 
 
 

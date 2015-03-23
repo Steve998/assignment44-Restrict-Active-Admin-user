@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Companies</h1>
+<h1 class = tbody >Listing All Companies</h1>
 
 <table>
   <thead>
@@ -16,7 +16,7 @@
   </thead>
 
   <tbody>
-    <% @companies.each do |company| %>
+    <% @usercompany.each do |company| %>
       <tr>
         <td><%= company.id %></td>
         <td><%= image_tag company.image_url(:thumb) if company.image? %></td>
