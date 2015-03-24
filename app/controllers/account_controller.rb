@@ -1,7 +1,5 @@
 class AccountController < ApplicationController
 
-
-
   def update
     if current_user.update(user_params)
       redirect_to account_edit_path, notice: 'Your account has been updated.'

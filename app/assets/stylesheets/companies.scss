@@ -1,22 +1,54 @@
 // Place all the styles related to the companies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import "bourbon/bourbon";
-$main-color: #d0e4fe;
 
-#header {
+
+// create the mixin
+
+@mixin awesome_button($color, $margin, $padding){
+  @include button($color);
+  margin: $margin;
+  padding: $padding;
+}
+
+// button time!
+
+.big_awesome {
+  @include awesome_button(#5570a7, 4px, 20px 40px 24px 40px);
+  font-size: 17px;
+  border-bottom-style: solid;
+  @include linear-gradient(to top, red, orange);
+
+}
+.small_awesome {
+  @include awesome_button(#51c96e, 4px, 5px 7px 8px 7px);
+}
+
+header {
 
   color: #FFF;
-  padding: 4px 100px;
-  border-bottom: solid 5px darken($main-color, 10%);
+  padding: 104px 100px;
+  border-bottom: solid 5px;
+  font-color: $font-color;
   @include linear-gradient(to top, red, orange);
-  @include box-shadow(0 0 6px 3px #000);
 
+}
+
+h1 {
+  text-align: left;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px 5px 5px 15px;
+  font-size: 25px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: $title-background-color;
+  color: darken($main-color, 90%);
 }
 
 h2 {
   text-align: left;
-  font-family: :arial;
+  font-family: Arial, sans-serif;
   padding: 5px 5px 5px 15px;
   font-size: 12px;
   margin: -7px;
@@ -25,25 +57,38 @@ h2 {
   color: $main-color;
 }
 
-body {
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    &:link {
+      color: #000000;
+    }
+    &:visited {
+      color: #00CC66;
+    }
+    &:hover {
+      color: #E6E65C;
+      background-color: #000;
+    }
+  }
+
+}
+tbody {
   background-color: $main-color;
-  color: #333;
-  font-family: $verdana;
+  color: #d0e4fe;
+  font-family: arial;
   font-size: 14px;
   line-height: 18px;
+  @include linear-gradient(to top, #335C85, #FFB2D1)
 }
 
-h1 {
-  text-align: left;
-  font-weight: bold;
-  font-family: $verdana;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  margin-bottom: 0px;
-  background-color: green;
-  color: $main-color;
-}
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;

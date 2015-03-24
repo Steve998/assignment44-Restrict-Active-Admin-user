@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class = tbody >Listing All Companies</h1>
+<h1 class = tbody>Listing All Companies</h1>
 
 <table>
   <thead>
@@ -22,9 +22,9 @@
         <td><%= company.name %></td>
         <td><%= company.customers.count %></td>
         <td><%= company.bio %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><nav><%= link_to 'Show', company %></nav></td>
+        <td><nav><%= link_to 'Edit', edit_company_path(company) %></nav></td>
+        <td><nav><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></nav></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,5 +32,6 @@
 
 <br>
 
-<%= link_to 'New Company', new_company_path %>
-<%= link_to 'Return to Main Page', root_path %>
+<nav><%= link_to 'New Company', new_company_path %>
+<%= link_to 'Return to Main Page', root_path %></nav><br>
+<a href="http://www.theironyard.com">Visit The Iron Yard!</a>
