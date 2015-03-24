@@ -1,7 +1,7 @@
 class CompaniesController < InheritedResources::Base
 
   def index
-    @companies = Company.all
+    @usercompany = current_user.companies
     logger.debug "DEBUG THIS LINE"
     logger.debug @companies.inspect
   end

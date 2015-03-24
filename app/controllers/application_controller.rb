@@ -4,12 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :current_user
-  before_action :usercompany
-
-  def usercompany
-    @usercompany = current_user.companies
-    
-  end
 
   def authenticate_admin_user!
     redirect_to root_path if !signed_in? || !current_user.admin?

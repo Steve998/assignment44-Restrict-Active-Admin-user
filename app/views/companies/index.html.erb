@@ -10,7 +10,6 @@
       <th>Company<br>name</th>
       <th>Customer<br>count</th>
       <th>Company<br>Bio</th>
-
       <th colspan="4"></th>
     </tr>
   </thead>
@@ -23,7 +22,6 @@
         <td><%= company.name %></td>
         <td><%= company.customers.count %></td>
         <td><%= company.bio %></td>
-
         <td><%= link_to 'Show', company %></td>
         <td><%= link_to 'Edit', edit_company_path(company) %></td>
         <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
