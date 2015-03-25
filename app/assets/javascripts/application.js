@@ -17,3 +17,7 @@
 //= require chosen-jquery
 //= require turbolinks
 //= require_tree .
+
+$( document ).ready(function() {
+  $(".chosen-select").chosen();
+});
