@@ -45,6 +45,8 @@ gem 'carrierwave'
 gem 'kaminari'
 # Bourbon
 gem 'bourbon'
+# Chosen
+gem 'chosen-rails'
 
 group :development do
   gem "better_errors"

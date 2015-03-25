@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require customers
+//= require chosen-jquery
 //= require turbolinks
 //= require_tree .
