@@ -18,8 +18,8 @@ avatar: "http://robohash.org/sitsequiquia.png?size=300x300",
 admin: false ).first_or_create
 
 
-4.times do |a|
-  1.times do|b|
+5.times do |a|
+  2.times do|b|
     user = User.ids.shuffle.first
     Company.create(name: Faker::Name.name,
     bio: Faker::Lorem.sentence(3),
