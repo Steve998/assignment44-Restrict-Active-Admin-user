@@ -22,7 +22,7 @@ admin: false ).first_or_create
   2.times do|b|
     user = User.ids.shuffle.first
     Company.create(name: Faker::Name.name,
-    bio: Faker::Lorem.sentence(3),
+    bio: Faker::Lorem.sentence(4),
     remote_image_url: "http://lorempixel.com/400/200/",
     user_id: user )
    end
