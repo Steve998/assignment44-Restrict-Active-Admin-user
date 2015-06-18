@@ -10,7 +10,7 @@
 
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-  
+
   <div>
     <h1><title>Company Application</title></h1>
   </div>
@@ -20,7 +20,7 @@
 
 <div>
   <body>
-    <h3>Welcome User: <% if signed_in? %><%= link_to @current_user.name, account_edit_path %><% end %></h3>
+    <h3>Welcome To The Application User: <% if signed_in? %><%= link_to @current_user.name, account_edit_path %><% end %></h3>
   </body>
 </div>
 

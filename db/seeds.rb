@@ -39,7 +39,7 @@ end
 
 
  Customer.all.each do |e|
-      2.times do |f|
+      3.times do |f|
       customer = Customer.ids.shuffle.first
       Order.create(number: Faker::Number.number(4),
       quantity: Faker::Number.number(1),

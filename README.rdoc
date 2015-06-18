@@ -21,6 +21,9 @@ Things you may want to cover:
 
 * Deployment instructions
 
+Keeping up with git
+staying current in ruby and rails
+
 * ...
 
 
