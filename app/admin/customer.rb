@@ -16,8 +16,8 @@ ActiveAdmin.register Customer do
   index do |x|
     selectable_column
     column :name
-    column :order
     column :company_id
+    column :order
     actions
   end
 
