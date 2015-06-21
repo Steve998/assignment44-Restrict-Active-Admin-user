@@ -16,8 +16,8 @@ ActiveAdmin.register Company do
   index do |x|
     selectable_column
     column :id
-    column :name
     column :bio
+    column :name
     column :image do |pic|
       link_to image_tag(pic.image.thumb.url)
     end
