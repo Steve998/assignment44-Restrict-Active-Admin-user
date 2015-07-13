@@ -23,8 +23,8 @@
         <td><%= company.name %></td>
         <td><%= company.customers.count %></td>
         <td><%= company.bio %></td>
-        <td><nav><%= link_to 'Show', company %></nav></td>
-        <td><nav><%= link_to 'Edit', edit_company_path(company) %></nav></td>
+        <td><nav><%= link_to 'Show Record', company %></nav></td>
+        <td><nav><%= link_to 'Edit Record', edit_company_path(company) %></nav></td>
         <td><nav><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></nav></td>
       </tr>
     <% end %>
